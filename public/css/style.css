@@ -1,0 +1,7 @@
+html {
+    font-family: "Arial", serif;
+}
+
+#series {
+repeat(4, 1fr)
+}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <h1 style="text-align: center">Wish detail</h1>
+
+    <h3>{{ wish.title }}</h3> <br>
+    <p><a>{{ wish.category.name }}</a></p><br>
+    <p>{{ wish.description }}</p>
+    <p>{{ wish.user.email }}, le {{ wish.dateCreated | date}} </p>
+{% endblock %}

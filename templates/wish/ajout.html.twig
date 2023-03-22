@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start(wishForm) }}
+    {{ form_widget(wishForm) }}
+
+    <button>Ajouter</button>
+    {{ form_end(wishForm) }}
+{% endblock %}

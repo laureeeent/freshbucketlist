@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WishController!{% endblock %}
+
+{% block body %}
+    <h1 style="text-align: center">Wish List</h1>
+
+    <ul>
+        {% for wish in wishesCensuree %}
+            <li><a href="{{ path("wish_detail", {"wish" : wish.id}) }}">{{ wish.title }}</a>,<br>
+                <div>{{ wish.description }}</div><a>{{ wish.category.name }}</a>, de {{ wish.user.email }} le {{ wish.dateCreated | date}}</li>
+        {% endfor %}
+    </ul>
+
+    <a style="text-align: center" href="{{ path("wish_ajout") }}">Ajouter un souhait</a>
+{% endblock %}
